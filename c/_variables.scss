@@ -1,0 +1,44 @@
+// Fonts
+$text-body: "PT Serif", georgia, serif;
+$text-heading: Arvo, serif;
+$text-logo: Rokkitt, serif;
+
+// Colors
+$off-white: #f9f9f9;
+$lighter-grey: #efefef;
+$border-grey: #bbb;
+$light-grey: #999;
+$grey: #666;
+$dark-grey: #333;
+
+$black: #000;
+
+$dark-red: #9b0000;
+
+// Responsive break-points
+$break1: 650px;
+$break2: 1024px;
+
+// Mixins and Extends
+%clearfix {
+	&:after {
+	    content: "";
+    	display: table;
+    	clear: both;
+  	}
+}
+%text-replace {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+@mixin flexbox($type) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: $type;
+  -ms-justify-content: $type;
+  justify-content: $type;
+}

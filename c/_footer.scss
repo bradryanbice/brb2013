@@ -1,0 +1,89 @@
+.global-footer {
+	background: $dark-grey;
+	color: $lighter-grey;
+	footer {
+		padding: 1.5em 0 0;
+		& > div {
+			margin: 0;
+			padding: 0 4%;
+		}
+		& > div[class^="foot-"] {
+			@media all and (min-width: $break1) {
+				float: left;
+				width: 61%;
+				padding: 0 0 0 4%;
+			}
+		}
+		& > div.foot-links {
+			@media all and (min-width: $break1) {
+				float: right;
+				width: 26%;
+				margin: 0 0 0 5%;
+				padding: 0 4% 0 0;
+			}
+		}
+		& > div.foot-copy p {
+			@media all and (min-width: $break1) {
+				margin: 0;
+				padding: .5em 0;
+				border-top: 1px solid $lighter-grey;
+			}
+		}
+	}
+	h5 {
+		color: $lighter-grey;
+		font-size: 1.25em;
+		line-height: 1.75;
+		margin-bottom: 0;
+	}
+	p, ul {
+		font-size: 0.75em;
+	}
+	ul p {
+		margin-bottom: .5em;
+	}
+	a {
+		color: $lighter-grey;
+	}
+	p a {
+		text-decoration: underline;
+	}
+	.feed {
+		text-decoration: none;
+		margin-left: 1.5em;
+	}
+}
+
+
+.foot-links {
+	ul {
+		margin: 0 0 1.5em 0;
+		color: $lighter-grey;
+		li {
+			margin: 0 0 1em;
+			a {
+				display: block;
+				text-decoration: underline;
+				color: $lighter-grey;
+			}
+		}
+	}
+}
+.foot-social {
+	li {
+		font-size: 3em;
+		display: inline-block;
+		margin: 0 3% 0 0;
+		line-height: .75;
+		padding: 0 3% 0 0;
+		border-right: 1px solid $grey;
+		&:last-child {
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		span {
+			display: none;
+		}
+	}
+}

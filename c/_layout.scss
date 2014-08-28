@@ -1,0 +1,248 @@
+// Globals
+
+body {
+	font-size: 100%;
+	font-family: $text-body;
+	color: $dark-grey;
+	background: $off-white;
+}
+a {
+	color: $dark-grey;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $text-heading;
+	font-weight: bold;
+	color: $dark-grey;
+	margin: 0 0 .75em;
+}
+p, ul, ol, table {
+	font-family: $text-body;
+	margin: 0 0 1.5em 0;
+	line-height: 1.5em;
+}
+p a {
+	color: $dark-red;
+}
+img {
+	max-width: 100%;
+}
+.global-header, .main-wrapper, .global-footer footer {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	@extend %clearfix;
+}
+
+
+// Layout
+
+.sitewide {
+	display: none;
+	background-color: $dark-grey;
+	color: #fff;
+	font: 11px/3em $text-body;
+	text-align: center;
+	p {
+		max-width: 1024px;
+		margin: 0 auto;
+		line-height: 3em;
+	}
+}
+
+.main-content {
+	padding: 0 4% 1.5em;
+	@media all and (min-width: $break1) {
+		width: 61%;
+		float: left;
+		padding-right: 0;
+	}
+	& > article {
+		padding: 1.5em 0 0;
+	}
+	article + article {
+		border-top: 1px solid $border-grey;
+		padding-top: 1.4375em;
+	}
+	h1 {
+		font-size: 1.375em;
+		margin-bottom: 0.125em;
+		line-height: 1.5;
+		a {
+			font: bold 1em/1.5 $text-heading;
+			display: block;
+			color: $dark-grey;
+			&:hover {
+				color: $dark-red;
+			}
+		}
+		time {
+			font: 0.75em/1.5 $text-body;
+			color: $grey;
+			padding: 1em 0 0;
+			a {
+				color: $black;
+			}
+		}
+	}
+	header.archive-header {
+		padding: 1.5em 0 0;
+	}
+}
+.entry {
+	margin: 1.5em 0;
+	h2 {
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+	h3 {
+		font-size: 1em;
+	}
+}
+[class^="entry"] figure {
+	float: right;
+	max-width: 40%;
+	margin: 0 0 1em 2%;
+	&.left {
+		float: left;
+		max-width: 40%;
+		margin: 0 2% 1em 0;
+	}
+	&.banner {
+		float: none;
+		max-width: 100%;
+		margin: 0 0 1em;
+	}
+	img {
+		max-width: 100%;
+	}
+}
+.entry {
+	ul, ol {
+		margin: 0 0 1.5em 1.5em;
+		list-style: disc;
+	}
+	& > blockquote {
+		border-left: 1px solid $dark-grey;
+		padding-left: 1em;
+		font-size: .85em;
+	}
+	ol {
+		list-style: decimal;
+	}
+} 
+.main-content [class^="entry"] p a {
+	color: $dark-red;
+	text-decoration: underline;
+}
+.main-content [class^="entry"] p > em {
+	font-style: italic;
+}
+.main-content article > footer {
+	padding-bottom: 1.5em;
+}
+.main-content article > footer .art-cat, footer address {
+	font-size: 0.75em;
+	margin: 0 0 0.25em;
+	display: inline;
+}
+footer .leave-reply {
+	display: inline-block;
+	margin: .75em 0;
+	padding: .5em;
+	background: $lighter-grey;
+	border-radius: 10px;
+}
+.comments-area {
+	margin: 1.5em 0 0;
+}
+article.tweet {
+	padding: 1.5em 0 1.5em 20%;
+	background: url(/wp-content/themes/brb2013/img/twitter.svg) no-repeat 2% center;
+	background-size: 13%;
+	@extend %clearfix;
+	@media all and (min-width: $break1) {
+		padding: 1.5em 0 1.5em 15%;
+		background-size: 10%;
+	}
+	.entry {
+		margin: 0;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+		& > i {
+			opacity: .75;
+		}
+	}
+	.main-content & p a {
+		text-decoration: none;
+	}
+}
+.nav-single {
+	@extend %clearfix;
+	& > span {
+		width: 50%;
+		float: left;
+		& + span {
+			text-align: right;
+		}
+	}
+}
+
+.full { 
+	@media all and (min-width: $break1) {
+		width: auto;
+		float: none;
+		padding: 0 4%;
+	}
+}
+
+// Sidebar
+
+.main-wrapper > aside {
+	background-color: rgba(0,0,0,.1);
+	padding: 1.5em 4%;
+	clear: both;
+	@media all and (min-width: $break1) {
+		background: transparent;
+		clear: none;
+		width: 26%;
+		float: left;
+		margin: 0;
+		padding: 1.5em 4% 1.5em 5%;
+	}
+}
+aside .widget {
+	@media all and (min-width: $break1) {
+		h2 {
+			line-height: 1.5;
+		}
+		& + .widget {
+			margin: 1.5em 0 0;
+			border-top: 1px solid #666;
+			padding: 1.5em 0 0;
+		}
+	}
+}
+div.tagcloud a {
+	@media all and (min-width: $break1) {
+		line-height: 1.5;
+	}
+}
+.widget_search .screen-reader-text {
+	@media all and (min-width: $break1) {
+		display: none;
+	}
+}
+
+// Gallery images
+a.envira-gallery-link,
+img.envira-gallery-image {
+	border-radius: 5px;
+}
+img.envira-gallery-image {
+	border: 1px solid rgba($dark-grey, .2);
+	border-style: none solid solid none;
+}

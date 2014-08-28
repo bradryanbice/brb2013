@@ -1,0 +1,41 @@
+.global-header {
+	padding: 1.5em 0 1.375em;
+	border-bottom: 2px solid $border-grey;
+}
+.logo {
+	text-align: center;
+	@extend %clearfix;
+	img {
+		width: 15%;
+		opacity: .5;
+	}
+	h1 {
+		font: normal 2em/1 $text-logo;
+		display: block;
+		color: $dark-grey;
+		margin: 0 0 0.5em;
+	}
+}
+.nav {
+	margin: 0 0 0 4%;
+	text-align: center;
+	li {
+		display: inline;
+		margin: 0 4% 0 0;
+		line-height: 1.5em;
+		a {
+			color: $grey;
+			font: 1.25em/1.5 $text-logo;
+			text-decoration: none;
+			&:hover {
+				color: $dark-red;
+			}
+		}
+		&.here a {
+			color: $black;
+		}
+	}
+	span {
+		display: none;
+	}
+}
